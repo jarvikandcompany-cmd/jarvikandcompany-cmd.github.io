@@ -110,6 +110,38 @@ nav a:hover {
   margin: 10px 0;
 }
 
+/* Music Links Buttons */
+.music-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.music-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+/* Platform colors */
+.music-btn.spotify      { background: #1DB954; }
+.music-btn.apple        { background: #FA2F55; }
+.music-btn.youtube      { background: #FF0000; }
+.music-btn.amazon       { background: #FF9900; }
+.music-btn.digital7     { background: #0073e6; }
+
 /* Footer */
 footer {
   background-color: #0b0b0b;
