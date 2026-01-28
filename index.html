@@ -55,14 +55,6 @@
           <option value="https://drive.google.com/file/d/1d0pP9AWaIQxNsqger_6dXhOZkBRaJUUi/preview">Worlds Between Us</option>
         </select>
         <iframe id="track-player-rise" src="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview" width="100%" height="80" allow="autoplay"></iframe>
-
-        <div class="music-links">
-          <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
-          <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
-          <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
-          <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
-          <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
-        </div>
       </div>
 
       <!-- House On Fire Album -->
@@ -86,17 +78,28 @@
           <option value="https://drive.google.com/file/d/1fQoUXc8KBhTQBKUh0ubNC2dDJIQoaJpZ/preview">Transcending Worlds</option>
         </select>
         <iframe id="track-player-fire" src="https://drive.google.com/file/d/17qrhz57dL8H_FFZBDNCSFtLNAkA2d4YU/preview" width="100%" height="80" allow="autoplay"></iframe>
-
-        <div class="music-links">
-          <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
-          <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
-          <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
-          <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
-          <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
-        </div>
       </div>
 
     </div>
+
+    <!-- Official Streaming Buttons -->
+    <div class="music-links official-streaming">
+      <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
+      <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
+      <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
+      <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
+      <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
+    </div>
+
+    <!-- Optional: Also Available Here dropdown -->
+    <label for="other-platforms-select">Also Available Here:</label>
+    <select id="other-platforms-select">
+      <option value="https://www.anghami.com/">Anghami</option>
+      <option value="https://www.hungama.com/">Hungama</option>
+      <option value="https://www.kkbox.com/">KKBox</option>
+      <option value="https://music.163.com/">NetEase Cloud Music</option>
+      <option value="https://www.tiktok.com/music">TikTok</option>
+    </select>
   </section>
 
   <footer id="connect">
@@ -124,10 +127,15 @@
     trackSelectors.forEach(ts => {
       const select = document.getElementById(ts.selectId);
       const player = document.getElementById(ts.playerId);
-
       select.addEventListener('change', () => {
         player.src = select.value;
       });
+    });
+
+    const otherPlatformsSelect = document.getElementById('other-platforms-select');
+    otherPlatformsSelect.addEventListener('change', () => {
+      const url = otherPlatformsSelect.value;
+      if (url) window.open(url, '_blank');
     });
   </script>
 </body>
