@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JΛRVIK & COMPΛNY</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a2e0e6a2c9.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header id="home">
@@ -29,68 +31,74 @@
   </section>
 
   <section id="albums" class="content-section">
-    <h2>Rise Again</h2>
-    <div class="album-art">
-      <img src="Jarvik&Company_Rise_Again_3000x3000_extended.png" alt="Rise Again Album Cover">
-    </div>
+    <h2>Albums</h2>
+    <div class="albums-grid">
 
-    <label for="track-select">Select a track to listen:</label>
-    <select id="track-select">
-      <option value="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview">Born to Break</option>
-      <option value="https://drive.google.com/file/d/1l63TipZ0ymoerexjrdZk3dWJK-y5c4eb/preview">Breaking the Ground</option>
-      <option value="https://drive.google.com/file/d/1ZL15uXzCkVVhO8-bX3c3ULgG4EtDUiU7/preview">Chasing the Horizon</option>
-      <option value="https://drive.google.com/file/d/1giO_9ihzJFcvWFw8JkU-kHlnNU8kEi1h/preview">Counting Moments</option>
-      <option value="https://drive.google.com/file/d/1Iqk6_135BiaoimDKLY7gqOxcQjS_oUQu/preview">Destiny's Call</option>
-      <option value="https://drive.google.com/file/d/1ZHtYuaQ6Hr6lifIn6KpX4S-Nv1hVuaUI/preview">Echoes of You</option>
-      <option value="https://drive.google.com/file/d/1HzHKjhXoRoiUmfX9aeUQYgcNR1rowzLj/preview">Empty Hands</option>
-      <option value="https://drive.google.com/file/d/1pZf4U5wDPlB-UEYmqQuStx7eyeiScPkn/preview">Fated Threads</option>
-      <option value="https://drive.google.com/file/d/1NlszT2uuGICIXa5OBpIIAfOO1iua6x5l/preview">Tethered to You</option>
-      <option value="https://drive.google.com/file/d/1L4Oq1SCICicGtUxwizMGlURu2_mlBAGf/preview">The Flightless Dreamer</option>
-      <option value="https://drive.google.com/file/d/1Q4B3xnEV4OX8-EfFo1E4m0R90NuFU__X/preview">The Little Things</option>
-      <option value="https://drive.google.com/file/d/1d0pP9AWaIQxNsqger_6dXhOZkBRaJUUi/preview">Worlds Between Us</option>
-    </select>
+      <!-- Rise Again Album -->
+      <div class="album-card">
+        <div class="album-art">
+          <img src="Jarvik&Company_Rise_Again_3000x3000_extended.png" alt="Rise Again Album Cover">
+        </div>
+        <label for="track-select-rise">Select a track:</label>
+        <select id="track-select-rise">
+          <option value="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview">Born to Break</option>
+          <option value="https://drive.google.com/file/d/1l63TipZ0ymoerexjrdZk3dWJK-y5c4eb/preview">Breaking the Ground</option>
+          <option value="https://drive.google.com/file/d/1ZL15uXzCkVVhO8-bX3c3ULgG4EtDUiU7/preview">Chasing the Horizon</option>
+          <option value="https://drive.google.com/file/d/1giO_9ihzJFcvWFw8JkU-kHlnNU8kEi1h/preview">Counting Moments</option>
+          <option value="https://drive.google.com/file/d/1Iqk6_135BiaoimDKLY7gqOxcQjS_oUQu/preview">Destiny's Call</option>
+          <option value="https://drive.google.com/file/d/1ZHtYuaQ6Hr6lifIn6KpX4S-Nv1hVuaUI/preview">Echoes of You</option>
+          <option value="https://drive.google.com/file/d/1HzHKjhXoRoiUmfX9aeUQYgcNR1rowzLj/preview">Empty Hands</option>
+          <option value="https://drive.google.com/file/d/1pZf4U5wDPlB-UEYmqQuStx7eyeiScPkn/preview">Fated Threads</option>
+          <option value="https://drive.google.com/file/d/1NlszT2uuGICIXa5OBpIIAfOO1iua6x5l/preview">Tethered to You</option>
+          <option value="https://drive.google.com/file/d/1L4Oq1SCICicGtUxwizMGlURu2_mlBAGf/preview">The Flightless Dreamer</option>
+          <option value="https://drive.google.com/file/d/1Q4B3xnEV4OX8-EfFo1E4m0R90NuFU__X/preview">The Little Things</option>
+          <option value="https://drive.google.com/file/d/1d0pP9AWaIQxNsqger_6dXhOZkBRaJUUi/preview">Worlds Between Us</option>
+        </select>
+        <iframe id="track-player-rise" src="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview" width="100%" height="80" allow="autoplay"></iframe>
 
-    <iframe id="track-player" src="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview" width="100%" height="80" allow="autoplay"></iframe>
-  </section>
+        <label for="other-platforms-select-rise">Listen elsewhere:</label>
+        <select id="other-platforms-select-rise">
+          <option value="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt">Spotify</option>
+          <option value="https://music.apple.com/us/artist/jarvik-company/1851578015">Apple Music</option>
+          <option value="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g">YouTube Music</option>
+          <option value="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company">Amazon Music</option>
+          <option value="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true">7digital</option>
+        </select>
+      </div>
 
-  <section id="available" class="content-section">
-    <h2>Where the Album Is Available</h2>
-    <p>Stream or purchase my music on major platforms:</p>
-    <div class="music-links">
-      <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
-      <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
-      <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
-      <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
-      <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
-    </div>
+      <!-- House On Fire Album -->
+      <div class="album-card">
+        <div class="album-art">
+          <img src="HOUSE_ON_FIRE_COVER.png" alt="House On Fire Album Cover">
+        </div>
+        <label for="track-select-fire">Select a track:</label>
+        <select id="track-select-fire">
+          <option value="https://drive.google.com/file/d/17qrhz57dL8H_FFZBDNCSFtLNAkA2d4YU/preview">Chains of the City</option>
+          <option value="https://drive.google.com/file/d/1LOoTRCfvg0NofdJrjK_x0SHifDBvmhj4/preview">Done Being Used</option>
+          <option value="https://drive.google.com/file/d/1uu8rEBHXSR2-OFWhRdKzJqv1EGZSCLrD/preview">Echoes of the Fathers</option>
+          <option value="https://drive.google.com/file/d/1WAXKJcAOZp7wTuIC6Gxve4mvQB23KJFg/preview">Everything I Own</option>
+          <option value="https://drive.google.com/file/d/1FC9fn3XaAtJBiaLyCPIs3g-8Lt7fDtsk/preview">Gold Fangs on the Globe</option>
+          <option value="https://drive.google.com/file/d/1oEHO06fSRZ6m4LQ5mG1nftr5XfoNWGol/preview">House On Fire</option>
+          <option value="https://drive.google.com/file/d/1jpfXD7I33ofza-MwYVfMtrI3tZ5pPlyl/preview">Knocked Down Again</option>
+          <option value="https://drive.google.com/file/d/1yk1lqnJLKuba-PxDHyDZnO4dzLieblZC/preview">Mind Your Own Shadows</option>
+          <option value="https://drive.google.com/file/d/1RPDyRLUy0vhxE0syFnIp50jF3ayc-Uea/preview">Overloaded</option>
+          <option value="https://drive.google.com/file/d/1qJaxD7ENc27yIWOu9pbhTehgcDubB4zN/preview">Run Faster Than Our Ruin</option>
+          <option value="https://drive.google.com/file/d/1kaWxtUZwCyi_x4zhJFEWqlF03SQe3mnF/preview">Time Unwinds</option>
+          <option value="https://drive.google.com/file/d/1fQoUXc8KBhTQBKUh0ubNC2dDJIQoaJpZ/preview">Transcending Worlds</option>
+        </select>
+        <iframe id="track-player-fire" src="https://drive.google.com/file/d/17qrhz57dL8H_FFZBDNCSFtLNAkA2d4YU/preview" width="100%" height="80" allow="autoplay"></iframe>
 
-    <h3>Also Available On</h3>
-    <label for="other-platforms-select">Select a platform:</label>
-    <select id="other-platforms-select">
-      <option value="https://www.anghami.com/">Anghami</option>
-      <option value="https://www.ami.com/">AMI</option>
-      <option value="https://www.boomplay.com/">Boomplay</option>
-      <option value="https://www.hungama.com/">Hungama</option>
-      <option value="https://www.imusica.com/">iMusica</option>
-      <option value="https://www.inprodicon.com/">InProdicon</option>
-      <option value="https://www.kdigital.com/">KDigital</option>
-      <option value="https://www.kkbox.com/">KKBox</option>
-      <option value="https://www.kuack.com/">Kuack</option>
-      <option value="https://www.lissen.com/">Lissen</option>
-      <option value="https://music.163.com/">NetEase Cloud Music</option>
-      <option value="https://www.nuuday.com/">Nuuday</option>
-      <option value="https://www.peloton.com/">Peloton</option>
-      <option value="https://www.qobuz.com/">Qobuz</option>
-      <option value="https://www.saavn.com/">Saavn</option>
-      <option value="https://www.slacker.com/">Slacker Radio</option>
-      <option value="https://www.synchtank.com/">Synchtank</option>
-      <option value="https://www.tencent.com/en-us/">Tencent Music Entertainment (TME)</option>
-      <option value="https://www.tiktok.com/music">TikTok</option>
-      <option value="https://www.touchtunes.com/">TouchTunes</option>
-      <option value="https://www.trebelmusic.com/">Trebel</option>
-      <option value="https://www.tunedglobal.com/">Tuned Global</option>
-    </select>
-    <p class="availability-note">Availability may vary by region. Use the platform homepage to find my album.</p>
+        <label for="other-platforms-select-fire">Listen elsewhere:</label>
+        <select id="other-platforms-select-fire">
+          <option value="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt">Spotify</option>
+          <option value="https://music.apple.com/us/artist/jarvik-company/1851578015">Apple Music</option>
+          <option value="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g">YouTube Music</option>
+          <option value="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company">Amazon Music</option>
+          <option value="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true">7digital</option>
+        </select>
+      </div>
+
+    </div> <!-- albums-grid -->
   </section>
 
   <footer id="connect">
@@ -109,24 +117,32 @@
     <p>© 2025 JΛRVIK & COMPΛNY — All Rights Reserved</p>
   </footer>
 
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a2e0e6a2c9.js" crossorigin="anonymous"></script>
-
-  <!-- Track and platform selector JS -->
+  <!-- JS -->
   <script>
-    const trackSelect = document.getElementById('track-select');
-    const trackPlayer = document.getElementById('track-player');
+    const trackSelectors = [
+      { selectId: 'track-select-rise', playerId: 'track-player-rise' },
+      { selectId: 'track-select-fire', playerId: 'track-player-fire' }
+    ];
 
-    trackSelect.addEventListener('change', function() {
-      trackPlayer.src = this.value;
+    trackSelectors.forEach(ts => {
+      const select = document.getElementById(ts.selectId);
+      const player = document.getElementById(ts.playerId);
+
+      select.addEventListener('change', () => {
+        player.src = select.value;
+      });
     });
 
-    const otherPlatformsSelect = document.getElementById('other-platforms-select');
-    otherPlatformsSelect.addEventListener('change', function() {
-      const url = this.value;
-      if (url) {
-        window.open(url, '_blank');
-      }
+    const platformSelectors = [
+      'other-platforms-select-rise',
+      'other-platforms-select-fire'
+    ];
+
+    platformSelectors.forEach(id => {
+      const select = document.getElementById(id);
+      select.addEventListener('change', function() {
+        if (this.value) window.open(this.value, '_blank');
+      });
     });
   </script>
 </body>
