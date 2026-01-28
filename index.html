@@ -56,14 +56,13 @@
         </select>
         <iframe id="track-player-rise" src="https://drive.google.com/file/d/1yDCkYXR7cclqAP01TGxq7peHZU0BQ5PX/preview" width="100%" height="80" allow="autoplay"></iframe>
 
-        <label for="other-platforms-select-rise">Listen elsewhere:</label>
-        <select id="other-platforms-select-rise">
-          <option value="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt">Spotify</option>
-          <option value="https://music.apple.com/us/artist/jarvik-company/1851578015">Apple Music</option>
-          <option value="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g">YouTube Music</option>
-          <option value="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company">Amazon Music</option>
-          <option value="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true">7digital</option>
-        </select>
+        <div class="music-links">
+          <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
+          <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
+          <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
+          <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
+          <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
+        </div>
       </div>
 
       <!-- House On Fire Album -->
@@ -88,17 +87,16 @@
         </select>
         <iframe id="track-player-fire" src="https://drive.google.com/file/d/17qrhz57dL8H_FFZBDNCSFtLNAkA2d4YU/preview" width="100%" height="80" allow="autoplay"></iframe>
 
-        <label for="other-platforms-select-fire">Listen elsewhere:</label>
-        <select id="other-platforms-select-fire">
-          <option value="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt">Spotify</option>
-          <option value="https://music.apple.com/us/artist/jarvik-company/1851578015">Apple Music</option>
-          <option value="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g">YouTube Music</option>
-          <option value="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company">Amazon Music</option>
-          <option value="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true">7digital</option>
-        </select>
+        <div class="music-links">
+          <a href="https://open.spotify.com/artist/5vPPV4JZBZh5zLEgjeQOEt" target="_blank" class="music-btn spotify">Spotify</a>
+          <a href="https://music.apple.com/us/artist/jarvik-company/1851578015" target="_blank" class="music-btn apple">Apple Music</a>
+          <a href="https://music.youtube.com/channel/UCRKNU_kIpDwUZ2ifaY3e2-g" target="_blank" class="music-btn youtube">YouTube Music</a>
+          <a href="https://music.amazon.com/artists/B0G1D7H5DZ/jarvik-company" target="_blank" class="music-btn amazon">Amazon Music</a>
+          <a href="https://us.7digital.com/search?q=Jarvik%26Company&fallback=true" target="_blank" class="music-btn digital7">7digital</a>
+        </div>
       </div>
 
-    </div> <!-- albums-grid -->
+    </div>
   </section>
 
   <footer id="connect">
@@ -117,7 +115,6 @@
     <p>© 2025 JΛRVIK & COMPΛNY — All Rights Reserved</p>
   </footer>
 
-  <!-- JS -->
   <script>
     const trackSelectors = [
       { selectId: 'track-select-rise', playerId: 'track-player-rise' },
@@ -130,18 +127,6 @@
 
       select.addEventListener('change', () => {
         player.src = select.value;
-      });
-    });
-
-    const platformSelectors = [
-      'other-platforms-select-rise',
-      'other-platforms-select-fire'
-    ];
-
-    platformSelectors.forEach(id => {
-      const select = document.getElementById(id);
-      select.addEventListener('change', function() {
-        if (this.value) window.open(this.value, '_blank');
       });
     });
   </script>
